@@ -21,7 +21,7 @@ public float accelaration;
 	public void MoveToTarget(){
 		target = GameObject.Find("Player").transform;
 		direction = (target.position - transform.position).normalized;
-		accelaration = 0.1f;
+		accelaration = 0.2f;
 		velocity = (velocity+accelaration*Time.deltaTime);
 		float distance = Vector3.Distance(target.position, transform.position);
 		if(distance <= 10.0f){
